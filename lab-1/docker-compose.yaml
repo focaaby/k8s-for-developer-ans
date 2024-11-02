@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: "nginx:1.26.2"
+    ports:
+      - "8080:80"
+  ubuntu:
+    image: "ubuntu:24.04"
+    entrypoint: "sleep"
+    command: "3600"
