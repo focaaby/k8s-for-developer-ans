@@ -64,3 +64,18 @@ sh-4.2$ curl localhost:31282
 
 
 <!-- IngressClass -->
+
+1. AWS Load Balancer Controller walkthrough: echoserver
+
+```
+kubectl -n echoserver describe ing echoserver
+kubectl -n echoserver get ing echoserver
+kubectl get ingressclass
+```
+2. Review ELB console
+
+3. Modify IngressClass name from `alb` to `nginx` in `echoserver-ingress.yaml` , and apply
+4. Attach into the controller pod, and review nginx config
+```
+kubectl -n ingress-nginx exec -it ingress-nginx-controller-6568cc55cd-tjvwn -- bash
+```
